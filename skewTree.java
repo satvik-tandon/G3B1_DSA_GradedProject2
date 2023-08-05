@@ -1,11 +1,11 @@
 package G3B1_DSA_GradedProject2;
 
-class TreeNode {
+class Node {
 
 	int value;
-	TreeNode left, right;
+	Node left, right;
 
-	public TreeNode(int value) {
+	public Node(int value) {
 		this.value = value;
 		this.left = this.right = null;
 	}
@@ -13,10 +13,10 @@ class TreeNode {
 
 public class skewTree {
 
-	private TreeNode headNode = null;
-	private TreeNode prevNode = null;
+	private Node headNode = null;
+	private Node prevNode = null;
 
-	public void buildSkewTree(TreeNode tree) {
+	public void buildSkewTree(Node tree) {
 
 		if (tree == null)
 			return;
@@ -37,7 +37,7 @@ public class skewTree {
 	}
 
 	public void printSkewTree() {
-		TreeNode node = headNode;
+		Node node = headNode;
 		while (node != null) {
 			System.out.print(node.value + " ");
 			node = node.right;
@@ -49,11 +49,11 @@ class Main {
 
 	public static void main(String[] args) {
 
-		TreeNode tree = new TreeNode(50);
-		tree.left = new TreeNode(30);
-		tree.right = new TreeNode(60);
-		tree.left.left = new TreeNode(10);
-		tree.right.left = new TreeNode(55);
+		Node tree = new Node(50);
+		tree.left = new Node(30);
+		tree.right = new Node(60);
+		tree.left.left = new Node(10);
+		tree.right.left = new Node(55);
 
 		skewTree skewTree = new skewTree();
 		skewTree.buildSkewTree(tree);
