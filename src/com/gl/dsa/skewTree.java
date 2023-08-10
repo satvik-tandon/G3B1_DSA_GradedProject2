@@ -1,5 +1,4 @@
-package G3B1_DSA_GradedProject2;
-
+package com.gl.dsa;
 class Node {
 
 	int value;
@@ -45,7 +44,7 @@ public class skewTree {
 	}
 }
 
-class Main {
+class skyscraper {
 
 	public static void main(String[] args) {
 
